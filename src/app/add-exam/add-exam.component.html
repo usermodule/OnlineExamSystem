@@ -1,0 +1,74 @@
+<div class="container">
+<h2>Add Test Paper</h2>
+         <form _lpchecked="1">
+
+            <div class="form-group">
+              <label class="form-label" for="form3Example1c">Difficulty Level</label>
+                          
+              <input type="text" class="form-control"  [(ngModel)]="testPaper.difficultyLevel" id="difficultyLevel" name="difficultyLevel" #difficultyLevel="ngModel" placeholder="Difficulty Level" required pattern="^[a-zA-Z\s]+" />
+              <div *ngIf="difficultyLevel.invalid && (difficultyLevel.dirty || difficultyLevel.touched)" class="myerror">
+                <div *ngIf="difficultyLevel.invalid==true">
+                    <div style="color: red;" *ngIf="difficultyLevel.errors?.['required']">
+                        Field is required Field
+                    </div>
+                    <div style="color: red;" *ngIf="difficultyLevel.errors?.['pattern']">
+                         Field is not valid
+                    </div>
+                </div>
+           </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form3Example3c">Description </label>
+                          
+            <input type="text" class="form-control"  [(ngModel)]="testPaper.description" id="description" name="description" #description="ngModel" placeholder="Description" required pattern="[a-zA-Z\s]+" />
+            <div *ngIf="description.invalid && (description.dirty || description.touched)" class="myerror">
+              <div *ngIf="description.invalid==true">
+                  <div style="color: red;" *ngIf="description.errors?.['required']">
+                      Field is required Field
+                  </div>
+                  <div style="color: red;" *ngIf="description.errors?.['pattern']">
+                       Field is not valid
+                  </div>
+              </div>
+         </div>
+                              </div>
+                              
+                            
+     <div class="form-group">
+      <label class="form-label" for="form3Example4cd">Course</label>
+                          <input type="text" id="form3Example4cd" class="form-control"  [(ngModel)]="testPaper.course" id="course" name="course" #course="ngModel" placeholder=" Course" required pattern="[a-zA-Z]+" />
+    
+                          <div *ngIf="course.invalid && (course.dirty || course.touched)" class="myerror">
+                            <div *ngIf="course.invalid==true">
+                                <div style="color: red;" *ngIf="course.errors?.['required']">
+                                   Field is required Field
+                                </div>
+                                <div style="color: red;" *ngIf="course.errors?.['pattern']">
+                                     Field is not valid
+                                </div>
+                            </div>
+                       </div>
+     </div>
+     <div class="form-group">
+      <label class="form-label" for="form3Example4cd">No Of Questions</label>
+      <input type="number" id="form3Example4cd" class="form-control"  [(ngModel)]="testPaper.noOfQuestions" id="noOfQuestions" name="noOfQuestions" #noOfQuestions="ngModel" placeholder=" noOfQuestions" required />
+  
+      <div *ngIf="noOfQuestions.invalid && (noOfQuestions.dirty || noOfQuestions.touched)" class="myerror">
+        <div *ngIf="noOfQuestions.invalid==true">
+            <div style="color: red;" *ngIf="noOfQuestions.errors?.['required']">
+               Field is required Field
+            </div>
+            <div style="color: red;" *ngIf="noOfQuestions.errors?.['pattern']">
+                 Field is not valid
+            </div>
+        </div>
+   </div>
+     </div>
+     <br/>
+     <div class="d-flex flex-row align-items-center justify-content-between" >
+                                  <button class="btn btn-primary" (click)="onAddingTestPaper()" (click)="onAddingExam()">Add Test Paper</button>
+            </div>
+         </form>
+         <br/>
+        </div>  
+

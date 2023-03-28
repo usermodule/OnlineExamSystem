@@ -1,0 +1,112 @@
+<div class="container">
+<h2>Add Question </h2>
+         <form _lpchecked="1">
+
+            <div class="form-group">
+              <label class="form-label" for="form3Example1c">Question</label>
+                          
+              <input type="text" class="form-control"  [(ngModel)]="testQuestion.question" id="question" name="question" #question="ngModel" placeholder="Question" required />
+              <div *ngIf="question.invalid && (question.dirty || question.touched)" class="myerror">
+                <div *ngIf="question.invalid==true">
+                    <div style="color: red;" *ngIf="question.errors?.['required']">
+                        Field is required Field
+                    </div>
+                </div>
+           </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form3Example3c">Option 1 </label>
+                          
+            <input type="text" class="form-control"  [(ngModel)]="testQuestion.option1" id="option1" name="option1" #option1="ngModel" placeholder="Option1" required  />
+            <div *ngIf="option1.invalid && (option1.dirty || option1.touched)" class="myerror">
+              <div *ngIf="option1.invalid==true">
+                  <div style="color: red;" *ngIf="option1.errors?.['required']">
+                      Field is required Field
+                  </div>
+              </div>
+         </div>
+                              </div>
+                              
+                            
+     <div class="form-group">
+      <label class="form-label" for="form3Example4cd">Option 2</label>
+                          <input type="text" id="form3Example4cd" class="form-control"  [(ngModel)]="testQuestion.option2" id="option2" name="option2" #option2="ngModel" placeholder=" Option2" required  />
+    
+                          <div *ngIf="option2.invalid && (option2.dirty || option2.touched)" class="myerror">
+                            <div *ngIf="option2.invalid==true">
+                                <div style="color: red;" *ngIf="option2.errors?.['required']">
+                                   Field is required Field
+                                </div>
+                            </div>
+                       </div>
+     </div>
+     <div class="form-group">
+      <label class="form-label" for="form3Example4cd">Option 3</label>
+      <input type="text" id="form3Example4cd" class="form-control"  [(ngModel)]="testQuestion.option3" id="option3" name="option3" #option3="ngModel" placeholder=" option3" required />
+  
+      <div *ngIf="option3.invalid && (option3.dirty || option3.touched)" class="myerror">
+        <div *ngIf="option3.invalid==true">
+            <div style="color: red;" *ngIf="option3.errors?.['required']">
+               Field is required Field
+            </div>
+        </div>
+   </div>
+     </div>
+
+     <div class="form-group">
+        <label class="form-label" for="form3Example4cd">Option 4</label>
+        <input type="text" id="form3Example4cd" class="form-control"  [(ngModel)]="testQuestion.option4" id="option4" name="option4" #option4="ngModel" placeholder=" Option 4" required />
+    
+        <div *ngIf="option4.invalid && (option4.dirty || option4.touched)" class="myerror">
+          <div *ngIf="option4.invalid==true">
+              <div style="color: red;" *ngIf="option4.errors?.['required']">
+                 Field is required Field
+              </div>
+          </div>
+     </div>
+       </div>
+       <div class="form-group">
+        
+        <p class="form-label" for="form3Example4cd">Correct Answer</p>
+        <select  id="form3Example4cd" class="form-control"  [(ngModel)]="testQuestion.correctAnswer" id="correctAnswer" name="correctAnswer" #correctAnswer="ngModel" required >
+           <!-- <select #correctAnswer > -->
+            <!-- <input  id="form3Example4cd" class="form-control"  [(ngModel)]="testQuestion.correctAnswer.valueOf" id="correctAnswer" name="correctAnswer" #correctAnswer="ngModel"  required > -->
+               <option value="" disabled selected>CorrectAnswer</option>
+               <option value={{testQuestion.option1}}>Option 1</option>
+               <option value={{testQuestion.option2}}>Option 2</option>
+               <option value={{testQuestion.option3}}>Option 3</option>
+               <option value={{testQuestion.option4}}>Option 4</option>
+           </select>
+           <div *ngIf="correctAnswer.invalid && (correctAnswer.dirty || correctAnswer.touched)" class="myerror">
+            <div *ngIf="correctAnswer.invalid==true">
+                <div style="color: red;" *ngIf="correctAnswer.errors?.['required']">
+                   Field is required Field
+                </div>
+            </div>
+       </div>
+       </div>
+       
+
+<br/>
+     <div class="d-flex flex-row align-items-center justify-content-between" >
+                                  <button class="btn btn-outline-info" (click)="onAddingQuestion()" (click)="moveToAboutUs()">Add Question</button>
+            </div>
+         </form>
+        </div>
+
+
+
+
+
+         <!-- <div class="form-group">
+            <label class="form-label" for="form3Example4cd">Correct Answer</label>
+            <input type="text" id="form3Example4cd" class="form-control"  [(ngModel)]="testQuestion.correctAnswer" id="correctAnswer" name="correctAnswer" #correctAnswer="ngModel" placeholder=" CorrectAnswer" required />
+        
+            <div *ngIf="correctAnswer.invalid && (correctAnswer.dirty || correctAnswer.touched)" class="myerror">
+              <div *ngIf="correctAnswer.invalid==true">
+                  <div style="color: red;" *ngIf="correctAnswer.errors?.['required']">
+                     Field is required Field
+                  </div>
+              </div>
+         </div>
+           </div> -->

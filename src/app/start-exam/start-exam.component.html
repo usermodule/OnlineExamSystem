@@ -1,0 +1,137 @@
+
+
+
+ <div class="container">
+<tr>
+    <br/><br/>
+    <!-- <td> <button  (click)="getTestQuestionById()" onclick="getElementById('hidden-div').style.display = 'block'; this.style.display = 'none'">Start</button> </td> -->
+    <td><input type="text" style="margin-left: 12cm;" name="testPaperId" [(ngModel)] = "testPaperId" placeholder="testPaperId">
+        <br/>
+        <br/>
+      <!-- <button (click)="getTestQuestionById ()" style="margin-left: 12.5cm;" onclick="getElementById('hidden-div').style.display = 'block'; this.style.display = 'none'">Start</button></td> -->
+      <br/>
+      <ul style="margin-left: 8cm;">
+        <li>Follow the Instructions Carefully</li>
+        <li>Read the Question Paper Carefully</li>
+        <li>This exam contains countdown timer so manage your time </li>
+        <li>Once you click on save button question will be disable. You cannot attempt it again.</li>
+      </ul>
+      <h5 style="text-align: center;"> All The Best</h5><br/>
+      <button (click)="getTestQuestionById ()" style="margin-left: 16cm;" class="btn btn-outline-info" (click)="ngOnInit()" >Start</button></td>
+      
+  </tr>
+
+  <br/>
+  <br/>
+
+  
+  <p>Time left: {{seconds}} seconds</p>
+  <div style="margin-left: 5cm;" id="app"></div>
+  <div class="grid-container">
+
+   
+            <!-- <h5 class="card-title"><div style="color: rgb(146, 228, 219);"> -->
+<div class="panel panel-understanding-check">
+	
+        <div *ngFor="let testQuestion of testQuestionDto">
+            <form class="multipleChoice">
+            <div class="card" >
+                        
+                <div class="card-body">
+                <div>Question No. {{testQuestion.questionId}}</div>    
+                <!-- <label class="form-label" for="form3Example4cd">Question No</label>
+        <input type="text" id="form3Example4cd" class="form-control"  [(ngModel)]="testQuestion.questionId" id="questionId" name="questionId" #questionId="ngModel" placeholder="{{testQuestion.questionId}} " required />
+		<div class="form-group"> -->
+			<label for="radio">{{testQuestion.question}}</label>
+			<div class="radio">
+				<label>
+					<input type="radio"  name="testQuestion.questionId" id="bsr-radios-97468235240" [(ngModel)]="selectedAnswer" data-alert-type="alert-danger" data-comment="<strong>Incorrect</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit." [value]="testQuestion.option1">
+                    <!-- <input type="radio"  #studentAnswer="ngModel" name="option1" id="studentAnswer"   [(ngModel)]="exam.studentAnswer"  > -->
+                    {{testQuestion.option1}}
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio"  name="testQuestion.questionId" id="bsr-radios-97468235241"  data-alert-type="alert-danger" [(ngModel)]="selectedAnswer" data-comment="<strong>Incorrect</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit." [value]="testQuestion.option2" >
+					<!-- <input type="radio"  #studentAnswer="ngModel" name="studentAnswer" id="studentAnswer"   [(ngModel)]="exam.studentAnswer"  > -->
+                    {{testQuestion.option2}}
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio"  name="testQuestion.questionId" id="bsr-radios-97468235242"  data-alert-type="alert-danger" [(ngModel)]="selectedAnswer" data-comment="<strong>Incorrect</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit." [value]="testQuestion.option3" >
+					<!-- <input type="radio"  #studentAnswer="ngModel" name="studentAnswer" id="studentAnswer"   [(ngModel)]="exam.studentAnswer"  > -->
+                    {{testQuestion.option3}}
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio"  name="testQuestion.questionId"  id="bsr-radios-97468235243" data-alert-type="alert-success" [(ngModel)]="selectedAnswer" data-comment="<strong>Correct</strong><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit." [value]="testQuestion.option4">
+					<!-- <input type="radio"  #studentAnswer="ngModel" name="studentAnswer" id="studentAnswer"   [(ngModel)]="exam.studentAnswer"  > -->
+                    {{testQuestion.option4}}
+				</label>
+			</div>
+           
+            <button style="margin-left: 4cm;" class="button" class="btn btn-outline-secondary" [disabled]="attempt[testQuestion.questionId-1]" (click)="updateScoreByExamId(testQuestion.questionId)">Save</button>
+            <!-- <button class="btn btn-primary" (click)="updateScore()">Save</button>
+
+<div *ngFor="let e of exam" style="background-color:rgb(244, 166, 138);"class="border border-dark">
+		</div> -->
+    </div>
+            
+</div>
+<br/>
+<br/>
+</form>
+    </div>
+    <br/>
+        
+	
+	<div class="multiple-choice-alert alert hidden" id="87518975480" role="alert"></div>
+    
+    <button style="margin-left: 18cm;" class="btn btn-outline-info" (click)=" moveToSubmittedExam()">Submit</button>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="grid-container">
+
+    <div *ngFor="let testPaper of allTestPaper">     
+                 <div>
+                    <div class="card" style="width: 18rem;">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title"><div style="color: rgb(146, 228, 219);">
+                                <a (click)=" moveToStartExam()" ><u style="font-size: 1cm;">{{testQuestion.question}}</u></a>
+                            </div></h5>
+                            <div>Difficulty Level: {{testQuestion.difficultyLevel}}</div>
+                            <div>Description: {{testQuestion.description}}</div>
+                            <div>Number of Question: {{testQuestion.noOfQuestions}}</div>
+
+                        </div>
+                        
+                    </div>
+                </div> -->
+            
+                <!-- <br/> 
+    </div>
+</div> -->

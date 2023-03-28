@@ -1,0 +1,35 @@
+<br/>
+<tr>
+          <td> <button class="btn btn-outline-info" (click)="getAllTestQuestion()" style="margin-left: 6cm;">View all Question</button> </td>
+          <td ><input type="text" style="margin-left: 12cm;" name="testPaperId" [(ngModel)] = "testPaperId"><br/><br/>
+            <button class="btn btn-outline-info" (click)=" getQuestionsByTestPaperId()" style="margin-left: 12.5cm;">Search Questions</button></td>
+        </tr>
+           <hr/>
+           
+           <br/>
+           <div class="grid-container">
+           
+                      <div *ngFor="let testQuestion of allTestQuestion">     
+                                   <div>
+                                    <div class="card" style="width: 18rem;">
+                                        <!--img class="card-img-top" src="..." alt="Card image cap"-->
+                                        <!-- <div *ngFor="let testQuestion of allTestQuestion"> -->
+                                        <div class="card-body">
+                                        <!-- <div *ngFor="let testQuestion of allTestQuestion"> -->
+                                        <!-- <h5 class="card-title">{{testQuestion.question}}</h5> -->
+                                        <div> Question No.  {{testQuestion.questionId}}</div>
+                                        <div> {{testQuestion.question}}</div>
+                                        <div> Option 1 : {{testQuestion.option1}}</div>
+                                        <div> Option 2 : {{testQuestion.option2}}</div>
+                                        <div> Option 3 : {{testQuestion.option3}}</div>
+                                        <div> Option 4 : {{testQuestion.option4}}</div>
+                                        <!-- <div> Correct Answer {{testQuestion.correctAnswer}}</div> -->
+                                        <!-- </div> -->
+                                        </div>
+                                        <br/>
+                                      <!-- </div> -->
+                                    </div>
+                                   </div>
+                      </div>
+                    </div>
+                                  <br/> 

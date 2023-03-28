@@ -1,0 +1,28 @@
+<br/>
+<button (click)="getAllTestPaper()">View all Test Paper</button>
+
+<br/>
+<hr/>
+
+<div class="grid-container">
+
+    <div *ngFor="let testPaper of allTestPaper">     
+                 <div>
+                    <div class="card" style="width: 18rem;">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title"><div style="color: rgb(71, 90, 87);">
+                                <a (click)=" moveToStartExam()" ><u style="font-size: 1cm;">{{testPaper.course}}</u></a>
+                            </div></h5>
+                            <div>Difficulty Level: {{testPaper.difficultyLevel}}</div>
+                            <div>Description: {{testPaper.description}}</div>
+                            <div>Number of Question: {{testPaper.noOfQuestions}}</div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <br/> 
+    </div>
+</div>

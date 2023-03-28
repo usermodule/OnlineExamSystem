@@ -1,0 +1,134 @@
+<!-- <div class="signup__container"> -->
+ <!-- <div class="container__child signup__thumbnail"> 
+       <div class="thumbnail__content text-center">
+        <h1 class="heading--primary">Welcome to Skillprovement.</h1>
+        <h2 class="heading--secondary">Are you ready to join the elite?</h2>
+      </div> --> 
+      <!-- <div class="thumbnail__links">
+        <ul class="list-inline m-b-0 text-center">
+          <li><a href="http://alexdevero.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
+           <li><a href="https://www.behance.net/alexdevero" target="_blank"><fa class="fa fa-behance"></fa></a></li> -->
+          <!-- <li><a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+      </div>  -->
+      <!-- <div class="signup__overlay"></div> -->
+    <!-- </div> - -->
+    <div class="container">
+    <div class="container__child signup__form">
+      <form action="#">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input class="form-control" type="text" name="username" id="username" [(ngModel)]="student.username" placeholder="username" #username="ngModel" required pattern="[a-zA-Z]+"/>
+          <div *ngIf="username.invalid && (username.dirty || username.touched)" class="myerror">
+            <div *ngIf="username.invalid==true">
+                <div style="color: red;" *ngIf="username.errors?.['required']">
+                    Field is required Field
+                </div>
+                <div style="color: red;" *ngIf="username.errors?.['pattern']">
+                  Field is not valid
+             </div>
+            </div>
+       </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" [(ngModel)]="student.password" placeholder="********"  #password="ngModel" required  pattern="[a-zA-Z0-9]*"/>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="myerror">
+              <div *ngIf="password.invalid==true">
+                  <div style="color: red;" *ngIf="password.errors?.['required']">
+                      Field is required Field
+                  </div>
+                  <div style="color: red;" *ngIf="password.errors?.['pattern']">
+                    Field is not valid
+               </div>
+              </div>
+         </div>
+          </div>
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input class="form-control" type="text" name="firstname" id="firstname" [(ngModel)]="student.firstName" placeholder="james.bond"  #firstName="ngModel" required pattern="[a-zA-Z]+"/>
+            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="myerror">
+              <div *ngIf="firstName.invalid==true">
+                  <div style="color: red;" *ngIf="firstName.errors?.['required']">
+                      Field is required Field
+                  </div>
+                  <div style="color: red;" *ngIf="firstName.errors?.['pattern']">
+                    Field is not valid
+               </div>
+              </div>
+         </div>
+          </div>
+          <div class="form-group">
+            <label for="firstname">Last Name</label>
+            <input class="form-control" type="text" name="lastname" id="lastname" [(ngModel)]="student.lastName" placeholder="james.bond"  #lastName="ngModel" required pattern="[a-zA-Z]+"/>
+            <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="myerror">
+              <div *ngIf="lastName.invalid==true">
+                  <div style="color: red;" *ngIf="lastName.errors?.['required']">
+                      Field is required Field
+                  </div>
+                  <div style="color: red;" *ngIf="lastName.errors?.['pattern']">
+                    Field is not valid
+               </div>
+              </div>
+         </div>
+          </div>
+          <div class="form-group">
+            <label for="firstname">Gender</label>
+            <input class="form-control" type="text" name="gender" id="gender" [(ngModel)]="student.gender" placeholder="james.bond"  #gender="ngModel" required pattern="[a-zA-Z]+" />
+            <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="myerror">
+              <div *ngIf="gender.invalid==true">
+                  <div style="color: red;" *ngIf="gender.errors?.['required']">
+                      Field is required Field
+                  </div>
+                  <div style="color: red;" *ngIf="gender.errors?.['pattern']">
+                    Field is not valid
+               </div>
+              </div>
+         </div>
+          </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input class="form-control" type="text" name="email" id="email" [(ngModel)]="student.emailId" placeholder="james.bond@spectre.com"  #emailId="ngModel" required />
+        
+        <div *ngIf="emailId.invalid && (emailId.dirty || emailId.touched)" class="myerror">
+          <div *ngIf="emailId.invalid==true">
+              <div style="color: red;" *ngIf="emailId.errors?.['required']">
+                  Field is required Field
+              </div>
+              <div style="color: red;" *ngIf="emailId.errors?.['pattern']">
+                Field is not valid
+           </div>
+          </div>
+     </div>
+    </div>
+        <div class="form-group">
+          <label for="mobileNo">Mobile Number</label>
+          <input class="form-control" type="text" name="mobileNo" id="mobileNo"[(ngModel)]="student.mobileNo"  placeholder="james.bond"  #mobileNo="ngModel" required pattern="[0-9]+"/>
+          <div *ngIf="mobileNo.invalid && (mobileNo.dirty || mobileNo.touched)" class="myerror">
+            <div *ngIf="mobileNo.invalid==true">
+                <div style="color: red;" *ngIf="mobileNo.errors?.['required']">
+                    Field is required Field
+                </div>
+                <div style="color: red;" *ngIf="mobileNo.errors?.['pattern']">
+                  Field is not valid
+             </div>
+            </div>
+       </div>
+        </div>
+        <br/>
+        <div class="m-t-lg">
+          <ul class="list-inline">
+            <li>
+              <button class="btn btn-outline-info" (click)="onRegisteringStudent()" type="submit"  >Register</button>
+              <!-- <a  class="signup__link" routerLink="/"><div style="margin-left: 2cm;"> am already a member </div></a> -->
+            </li>
+
+            <!-- <li>
+              <a class="signup__link" routerLink="/">I am already a member</a>
+            </li> -->
+          </ul>
+        </div>
+      </form>  
+    </div>
+  </div>
