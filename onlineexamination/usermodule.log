@@ -1,0 +1,111 @@
+2023-03-28T09:46:15.294+05:30  INFO 12332 --- [restartedMain] c.c.o.OnlineexaminationApplication       : Starting OnlineexaminationApplication using Java 17.0.5 with PID 12332 (C:\OnlineExaminationSystem\onlineexamination\bin\main started by SHKHADSE in C:\OnlineExaminationSystem\onlineexamination)
+2023-03-28T09:46:15.324+05:30  INFO 12332 --- [restartedMain] c.c.o.OnlineexaminationApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-03-28T09:46:19.230+05:30  INFO 12332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-28T09:46:19.234+05:30  INFO 12332 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-28T09:46:19.388+05:30  INFO 12332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-28T09:46:19.768+05:30  INFO 12332 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-28T09:46:19.908+05:30  INFO 12332 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-28T09:46:20.595+05:30  INFO 12332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-28T09:46:21.148+05:30  INFO 12332 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a1cfca7
+2023-03-28T09:46:21.154+05:30  INFO 12332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-28T09:46:21.261+05:30  INFO 12332 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-03-28T09:46:23.701+05:30  INFO 12332 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-28T09:46:23.744+05:30  INFO 12332 --- [restartedMain] c.c.o.student.controller.ExamController  : exam controller
+2023-03-28T09:46:24.608+05:30  INFO 12332 --- [restartedMain] c.c.o.s.controller.StudentController     : student controller
+2023-03-28T09:46:24.620+05:30  INFO 12332 --- [restartedMain] c.c.o.s.controller.TestPaperController   : testpaper controller
+2023-03-28T09:46:24.627+05:30  INFO 12332 --- [restartedMain] c.c.o.s.c.TestQuestionController         : testquestion controller
+2023-03-28T09:46:24.716+05:30  WARN 12332 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-28T09:46:25.762+05:30  INFO 12332 --- [restartedMain] c.c.o.OnlineexaminationApplication       : Started OnlineexaminationApplication in 11.684 seconds (process running for 13.35)
+2023-03-28T11:13:09.893+05:30  WARN 12332 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m17s214ms357µs100ns).
+2023-03-28T12:45:11.616+05:30  INFO 12332 --- [http-nio-2025-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-28T12:45:12.871+05:30  INFO 12332 --- [http-nio-2025-exec-7] c.c.o.s.controller.TestPaperController   :  --->> TestPaper saved TestPaper(testPaperId=52, difficultyLevel=Easy, description=JAVA, course=JAVA, noOfQuestions=2, testQuestion=null)
+2023-03-28T12:45:44.735+05:30  INFO 12332 --- [http-nio-2025-exec-1] c.c.o.s.c.TestQuestionController         :  --->> TestQuestion saved TestQuestion(questionId=52, question=adf, option1=w, option2=r, option3=r, option4=frgth, correctAnswer=r)
+2023-03-28T12:46:02.964+05:30  WARN 12332 --- [http-nio-2025-exec-6] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.cg.onlineexamination.student.controller.TestQuestionController
+2023-03-28T12:47:19.496+05:30  WARN 12332 --- [http-nio-2025-exec-7] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.cg.onlineexamination.student.controller.ExamController
+2023-03-28T12:47:32.325+05:30  WARN 12332 --- [http-nio-2025-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException: Cannot invoke "com.cg.onlineexamination.entity.Exam.toString()" because "updatedExam" is null]
+2023-03-28T12:47:38.871+05:30  WARN 12332 --- [http-nio-2025-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException: Cannot invoke "com.cg.onlineexamination.entity.Exam.toString()" because "updatedExam" is null]
+2023-03-28T12:49:52.910+05:30  INFO 12332 --- [http-nio-2025-exec-10] c.c.o.s.controller.TestPaperController   :  --->> TestPaper saved TestPaper(testPaperId=53, difficultyLevel=Easy, description=Basic Core Java, course=dfgh, noOfQuestions=12, testQuestion=null)
+2023-03-28T12:51:00.966+05:30  INFO 12332 --- [http-nio-2025-exec-8] c.c.o.s.controller.TestPaperController   :  --->> TestPaper saved TestPaper(testPaperId=54, difficultyLevel=Hard, description=Basic Core Java, course=JAVA, noOfQuestions=2, testQuestion=null)
+2023-03-28T12:51:21.685+05:30  INFO 12332 --- [http-nio-2025-exec-1] c.c.o.s.c.TestQuestionController         :  --->> TestQuestion saved TestQuestion(questionId=53, question=qqqqq, option1=A, option2=B, option3=s, option4=d, correctAnswer=A)
+2023-03-28T13:05:20.981+05:30  INFO 12332 --- [http-nio-2025-exec-4] c.c.o.s.c.TestQuestionController         :  --->> TestQuestion saved TestQuestion(questionId=54, question=wwww, option1=rttttt, option2=uuu, option3=hhh, option4=fff, correctAnswer=hhh)
+2023-03-28T13:06:22.149+05:30 ERROR 12332 --- [http-nio-2025-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.persistence.EntityNotFoundException: Unable to find com.cg.onlineexamination.entity.TestPaper with id 100] with root cause
+
+jakarta.persistence.EntityNotFoundException: Unable to find com.cg.onlineexamination.entity.TestPaper with id 100
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$JpaEntityNotFoundDelegate.handleEntityNotFound(EntityManagerFactoryBuilderImpl.java:182) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.checkTargetState(AbstractLazyInitializer.java:285) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:175) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:309) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:44) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:102) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at com.cg.onlineexamination.entity.TestPaper$HibernateProxy$yxFP5axB.getTestQuestion(Unknown Source) ~[main/:na]
+	at com.cg.onlineexamination.student.service.TestQuestionServiceImpl.getAllQuestionsByTestPaperId(TestQuestionServiceImpl.java:106) ~[main/:na]
+	at com.cg.onlineexamination.student.controller.TestQuestionController.getAllQuestionByTestPaperId(TestQuestionController.java:100) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.6.jar:6.0.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.6.jar:6.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.6.jar:6.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.6.jar:6.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.6.jar:6.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.6.jar:6.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-03-28T13:07:45.773+05:30  INFO 21008 --- [restartedMain] c.c.o.OnlineexaminationApplication       : Starting OnlineexaminationApplication using Java 17.0.5 with PID 21008 (C:\OnlineExaminationSystem\onlineexamination\bin\main started by SHKHADSE in C:\OnlineExaminationSystem\onlineexamination)
+2023-03-28T13:07:45.780+05:30  INFO 21008 --- [restartedMain] c.c.o.OnlineexaminationApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-03-28T13:07:50.581+05:30  INFO 21008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-28T13:07:50.582+05:30  INFO 21008 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-28T13:07:50.726+05:30  INFO 21008 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-28T13:07:51.239+05:30  INFO 21008 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-28T13:07:51.592+05:30  INFO 21008 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-28T13:07:52.483+05:30  INFO 21008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-28T13:07:53.037+05:30  INFO 21008 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72bb8d8a
+2023-03-28T13:07:53.041+05:30  INFO 21008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-28T13:07:53.143+05:30  INFO 21008 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-03-28T13:07:55.548+05:30  INFO 21008 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-28T13:07:55.574+05:30  INFO 21008 --- [restartedMain] c.c.o.student.controller.ExamController  : exam controller
+2023-03-28T13:07:56.410+05:30  INFO 21008 --- [restartedMain] c.c.o.s.controller.StudentController     : student controller
+2023-03-28T13:07:56.425+05:30  INFO 21008 --- [restartedMain] c.c.o.s.controller.TestPaperController   : testpaper controller
+2023-03-28T13:07:56.437+05:30  INFO 21008 --- [restartedMain] c.c.o.s.c.TestQuestionController         : testquestion controller
+2023-03-28T13:07:56.549+05:30  WARN 21008 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-28T13:07:57.378+05:30  INFO 21008 --- [restartedMain] c.c.o.OnlineexaminationApplication       : Started OnlineexaminationApplication in 12.603 seconds (process running for 13.918)
